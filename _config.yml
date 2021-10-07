@@ -22,7 +22,7 @@ about_me: >
   I'm a recent DevBootcamp graduate going into programming from a mathematical background. I got into programming because I love making things, but in most cases that requires tools and a workshop. Now I can work anytime, anywhere with all the latest tools readily available at my fingertips.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nathansouz4.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-linked_in_link: "https://www.linkedin.com/in/levytsroman"
+linked_in_link: "https://www.linkedin.com/in/n4thansouza/"
 github_link: "https://www.github.com/nathansouz4"
 twitter_username: ""
 google_analytics_id: ''
