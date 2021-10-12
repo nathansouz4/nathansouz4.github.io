@@ -21,17 +21,17 @@
     - class: pspice-plain
       skill_name: PSpice     
 
-- name: databases
+- name: Office task
   skills:
-    - class: postgresql-plain
-      skill_name: Postgresql
-    - class: mysql-plain
-      skill_name: MySQL
+    - class: latex-plain
+      skill_name: LaTeX
+    - class: Excel-plain
+      skill_name: Excel
 
 - name: frontend frameworks
   skills:
-    - class: react-plain
-      skill_name: React
+    - class: vhdl-plain
+      skill_name: VHDL
     - class: jekyll-plain
       skill_name: Jekyll
 
