@@ -4,12 +4,7 @@
       skill_name: HTML5
     - class: css3-plain
       skill_name: CSS3
-    - class: sass-plain
-      skill_name: SASS
-    - class: bootstrap-plain
-      skill_name: Bootstrap
-    - class: jquery-plain
-      skill_name: jQuery
+
 
 - name: languages
   skills:
@@ -17,15 +12,19 @@
       skill_name: JavaScript
     - class: python-plain
       skill_name: Python
-    - class: ruby-plain
-      skill_name: Ruby
+    - class: C++-plain
+      skill_name: C++
+    - class: Matlab-plain
+      skill_name: Matlab
+    - class: c-plain
+      skill_name: C
+    - class: pspice-plain
+      skill_name: PSpice     
 
 - name: databases
   skills:
     - class: postgresql-plain
       skill_name: Postgresql
-    - class: mongodb-plain
-      skill_name: MongoDB
     - class: mysql-plain
       skill_name: MySQL
 
@@ -33,10 +32,6 @@
   skills:
     - class: react-plain
       skill_name: React
-    - class: angularjs-plain
-      skill_name: Angular
-    - class: vuejs-plain
-      skill_name: Vue
     - class: jekyll-plain
       skill_name: Jekyll
 
@@ -57,8 +52,6 @@
       skill_name: Git
     - class: github-plain
       skill_name: GitHub
-    - class: heroku-original
-      skill_name: Heroku
     - class: docker-plain
       skill_name: Docker
 
@@ -68,10 +61,5 @@
       skill_name: Mocha
     - class: jasmine-plain
       skill_name: Jasmine
-    - class: rspec-plain
-      skill_name: RSpec
 
-- name: mobile
-  skills:
-    - class: react-original
-      skill_name: React Native
+
