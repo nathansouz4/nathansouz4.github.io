@@ -12,9 +12,9 @@
       skill_name: JavaScript
     - class: python-plain
       skill_name: Python
-    - class: C++-plain
+    - class: c++-plain
       skill_name: C++
-    - class: Matlab-plain
+    - class: matlab-plain
       skill_name: Matlab
     - class: c-plain
       skill_name: C
