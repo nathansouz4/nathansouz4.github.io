@@ -5,11 +5,8 @@
     - class: css3-plain
       skill_name: CSS3
 
-
 - name: languages
   skills:
-    - class: javascript-plain
-      skill_name: JavaScript
     - class: python-plain
       skill_name: Python
     - class: c++-plain
@@ -34,18 +31,6 @@
       skill_name: VHDL
     - class: jekyll-plain
       skill_name: Jekyll
-
-- name: backend frameworks
-  skills:
-    - class: rails-plain
-      skill_name: Ruby-on-Rails
-    - class: express-original
-      skill_name: Express
-    - class: nodejs-plain
-      skill_name: NodeJS
-    - class: django-plain
-      skill_name: Django
-
 - name: devops
   skills:
     - class: git-plain
@@ -55,11 +40,5 @@
     - class: docker-plain
       skill_name: Docker
 
-- name: testing
-  skills:
-    - class: mocha-plain
-      skill_name: Mocha
-    - class: jasmine-plain
-      skill_name: Jasmine
 
 
