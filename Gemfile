@@ -23,5 +23,5 @@ group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
 end
 
-
+gem "kramdown-parser-gfm", "~> 2.0"
 gem "webrick", "~> 1.7"
