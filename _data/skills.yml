@@ -29,9 +29,3 @@
     - class: 
       skill_name: Autocad
 
-- name: devops
-  skills:
-    - class: git-plain
-      skill_name: Git
-    - class: github-plain
-      skill_name: GitHub
