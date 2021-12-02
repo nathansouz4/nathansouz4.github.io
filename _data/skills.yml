@@ -1,15 +1,8 @@
-- name: web
-  skills:
-    - class: html5-plain
-      skill_name: HTML5
-    - class: css3-plain
-      skill_name: CSS3
-
-- name: languages
+- name: Languages
   skills:
     - class: python-plain
       skill_name: Python
-    - class: c++-plain
+    - class: cplusplus-plain
       skill_name: C++
     - class: matlab-plain
       skill_name: Matlab
@@ -31,14 +24,14 @@
       skill_name: VHDL
     - class: jekyll-plain
       skill_name: Jekyll
+
 - name: devops
   skills:
     - class: git-plain
       skill_name: Git
     - class: github-plain
       skill_name: GitHub
-    - class: docker-plain
-      skill_name: Docker
+
 
 
 
