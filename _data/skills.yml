@@ -35,27 +35,3 @@
       skill_name: Git
     - class: github-plain
       skill_name: GitHub
-
-- name: Soft Skills
-  skills:
-      - class: a
-      skill_name: TeamWork
-      - class: b
-      skill_name: Leadership
-      - class: c
-      skill_name: Problem solving
-      - class: d
-      skill_name: Clear communication
-      - class: e
-      skill_name: Flexibility
-
-- name: Foreign language
-  skills:
-    - class: f
-      skill_name: Portuguese - Native
-    - class: g
-      skill_name: Spanish - Basic
-    - class: h
-      skill_name: French - Intermediary
-    - class: i
-      skill_name: English - Advanced
