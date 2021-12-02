@@ -6,11 +6,11 @@
   technologies: [
                   python-plain
                 ]
-  cover: /assets/images/project_images/internet_speed/internet_speed1.jpg
+  cover: /assets/images/project_images/internet_Speed/internet_speed1.jpg
   images: [
-    '/assets/images/project_images/internet_speed/download_speed.png',
-    '/assets/images/project_images/internet_speed/ping.png',
-    '/assets/images/project_images/internet_speed/upload_speed.png'
+    '/assets/images/project_images/internet_Speed/download_speed.png',
+    '/assets/images/project_images/internet_Speed/ping.png',
+    '/assets/images/project_images/internet_Speed/upload_speed.png'
   ]
 
 - id: 3
