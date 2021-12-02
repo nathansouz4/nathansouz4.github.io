@@ -1,27 +1,20 @@
 - id: 2
-  title: Tic tac toe
-  url: https://tic-or-treat.herokuapp.com/
-  github_url: https://github.com/nyc-bobolinks-2016/tic_or_treat
-  description: A simple tic-tac-toe game allowing both registered and unregistered users to play against a computer. Logged-in users have the benefit of viewing various statistics about their past games and resuming unfinished games.
+  title: Using Python to monitoring internet speed
+  url: https://n4thansouza.medium.com/utilizando-python-para-monitorar-a-velocidade-da-internet-28507450f272
+  github_url: https://github.com/nathansouz4/Monitoramento-de-velocidade-de-internet
+  description: This program performs internet speed monitoring, enabling the visualization of the oscillations of the internet connection.The internet connection speed test is done at each time interval which is defined by the user, and at the end of the monitoring period, graphs of the variations of internet speeds recorded by the tests are generated.
   technologies: [
-                  html5-plain,
-                  css3-plain-wordmark
-                  javascript-plain,
-                  react-original,
-                  ruby-plain,
-                  rails-plain,
-                  postgresql-plain,
-                  heroku-original
+                  python-plain
                 ]
-  cover: /assets/images/project_covers/tic-tac-toe-cover.jpg
+  cover: /assets/images/project_images/internet_speed/internet_speed1.jpg
   images: [
-    '/assets/images/project_images/tic_tac_toe/tictactoe1.png',
-    '/assets/images/project_images/tic_tac_toe/tictactoe2.png',
-    '/assets/images/project_images/tic_tac_toe/tictactoe3.png'
+    '/assets/images/project_images/internet_speed/download_speed.png',
+    '/assets/images/project_images/internet_speed/ping.png',
+    '/assets/images/project_images/internet_speed/upload_speed.png'
   ]
 
 - id: 3
-  title: Stack Overflow Clone
+  title: Project analogique 
   url: https://dbc-hackoverflow.herokuapp.com/
   github_url: https://github.com/wvicioso/hackoverflow
   description: A standard discussion board app that's an attempt at a very simple version of the popular programming platform <a href='stackoverflow.com'>StackOverflow</a>. It allows users to ask questions, give answers and make comments as well as vote up or down on each of the above.
@@ -40,7 +33,7 @@
     '/assets/images/project_covers/hack-overflow-cover.png'
   ]
 - id: 4
-  title: ShootThingsGame
+  title: Lumus case
   url: https://levytsroman.github.io/shootThingsGame/
   github_url: https://github.com/LevytsRoman/shootThingsGame
   description: A small javaScript browser game, featuring a red plane (player) and an unhealthy onslaught of enemy planes flying over a pictureque rendering of my favorite planet (Earth) in MS Paint.

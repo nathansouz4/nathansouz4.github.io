@@ -4,10 +4,10 @@
       skill_name: Python
     - class: cplusplus-plain
       skill_name: C++
-    - class: matlab-plain
-      skill_name: Matlab
     - class: c-plain
       skill_name: C
+    - class: matlab-plain
+      skill_name: Matlab      
     - class: vhdl-plain
       skill_name: VHDL     
 
