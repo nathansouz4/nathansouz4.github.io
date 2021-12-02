@@ -45,3 +45,17 @@
       skill_name: Flexibility
 
 
+- name: Soft Skills
+  skills:
+      skill_name: TeamWork
+      skill_name: Leadership
+      skill_name: Problem solving
+      skill_name: Clear communication
+      skill_name: Flexibility
+
+- name: Foreign language
+  skills:
+      skill_name: Portuguese - Native
+      skill_name: Spanish - Basic
+      skill_name: French - Intermediary
+      skill_name: English - Advanced
