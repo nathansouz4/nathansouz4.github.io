@@ -1,15 +1,15 @@
-- name: Languages
+- name: Languages & devops
   skills:
     - class: python-plain
       skill_name: Python
     - class: cplusplus-plain
       skill_name: C++
     - class: c-plain
-      skill_name: C
-    - class: matlab-plain
-      skill_name: Matlab      
-    - class: vhdl-plain
-      skill_name: VHDL     
+      skill_name: C    
+    - class: git-plain
+      skill_name: Git
+    - class: github-plain
+      skill_name: GitHub
 
 - name: Office task
   skills:

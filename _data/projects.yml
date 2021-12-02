@@ -9,14 +9,15 @@
   cover: /assets/images/project_images/internet_Speed/internet_speed1.jpg
   images: [
     '/assets/images/project_images/internet_Speed/download_speed.png',
+    '/assets/images/project_images/internet_Speed/internet_speed1.jpg',
     '/assets/images/project_images/internet_Speed/ping.png',
     '/assets/images/project_images/internet_Speed/upload_speed.png'
   ]
 
 - id: 3
   title: Project analogique 
-  url: https://dbc-hackoverflow.herokuapp.com/
-  github_url: https://github.com/wvicioso/hackoverflow
+  url: 
+  github_url: 
   description: A standard discussion board app that's an attempt at a very simple version of the popular programming platform <a href='stackoverflow.com'>StackOverflow</a>. It allows users to ask questions, give answers and make comments as well as vote up or down on each of the above.
   technologies: [
                   html5-plain,
@@ -28,9 +29,9 @@
                   heroku-original,
                   materialize-plain
                 ]
-  cover: /assets/images/project_covers/hack-overflow-cover.png
+  cover: /assets/images/project_covers/projet.jpg
   images: [
-    '/assets/images/project_covers/hack-overflow-cover.png'
+    '/assets/images/project_covers/projet.jpg'
   ]
 - id: 4
   title: Lumus case
