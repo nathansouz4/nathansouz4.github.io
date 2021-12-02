@@ -8,22 +8,26 @@
       skill_name: Matlab
     - class: c-plain
       skill_name: C
-    - class: pspice-plain
-      skill_name: PSpice     
+    - class: vhdl-plain
+      skill_name: VHDL     
 
 - name: Office task
   skills:
-    - class: latex-plain
-      skill_name: LaTeX
+    - class: powerbi-plain
+      skill_name: Power-Bi
     - class: Excel-plain
       skill_name: Excel
+    - class: 
+      skill_name: Word
 
-- name: frontend frameworks
+- name: Engineering software 
   skills:
     - class: vhdl-plain
-      skill_name: VHDL
-    - class: jekyll-plain
-      skill_name: Jekyll
+      skill_name: Advanced Desing System
+    - class: 
+      skill_name: Pspice
+    - class: 
+      skill_name: Autocad
 
 - name: devops
   skills:
@@ -32,6 +36,12 @@
     - class: github-plain
       skill_name: GitHub
 
-
+- name: Soft Skills
+  skills:
+      skill_name: TeamWork
+      skill_name: Leadership
+      skill_name: Problem solving
+      skill_name: Clear communication
+      skill_name: Flexibility
 
 
