@@ -47,30 +47,25 @@
     '/assets/images/project_images/internet_Speed/ping.png',
     '/assets/images/project_images/internet_Speed/upload_speed.png'
   ]
- - name: ELECTRICAL INSTALLATIONS LABORATORY
-   url: 
-   github_url: 
-   short_description: >
-     Presentation analytics tool that helps presenters capture, monitor and track the audience's emotional reaction to their content in real-time.
-   long_description: >
-     Engage me was a week long final project at <a href='devbootcamp.com'>DevBootcamp</a>. With the help of the Microsoft Cognitive Services API, my team was able to display people's emotions in real time, giving the presenter an overview of how they are doing in real time, as well as the ability to look at the audience's emotion-data after the presentation to see shifts in emotions over time.
-   technologies: It's build with HTML5, CSS, javaScript, a ruby on rails back-end, jQuery and materialize for forms and styling and Charts.js for the data-visualization. Hosted on heroku.
-   img: /assets/images/project_covers/engage-me-cover.jpeg
-   tags: back-end Ruby-on-Rails finished javaScript jQuery charts.js materialize ajax HTML5 CSS3
-   id: 1
 
-# - name: Tic-tac-toe
-#   url: https://tic-or-treat.herokuapp.com/
-#   github_url: https://github.com/nyc-bobolinks-2016/tic_or_treat
-#   short_description: >
-#     A simple tic-tac-toe game allowing both registered and unregistered users to play against a computer. Logged-in users have the benefit of viewing various statistics about their past games and resuming unfinished games.
-#   long_description: >
-#     This mini-project was a rehearsal of working directly with a client with a pressing deadline. We designed, published, and presented a wireframe to get approval to start building. Adjust design and functionality to fit the client's fickle preferences. As a project lead, it was primarily my job to interact with the clients, delegate the responsibilities for each member as well as make executive decisions when we couldn't agree how to proceed.
-#   technologies: The page is built in HTML5, CSS, JavaScript, jQuery, Materialize, and a ruby on rails serverside. Hosted on heroku.
-#   img: /assets/images/project_covers/tic-tac-toe-cover.jpg
-#   tags: back-end Ruby-on-Rails finished javaScript jQuery Reakt materialize HTML5 CSS3 ajax
-#   id: 2
-#
+- id: 5
+  title: Eletrical Installations Laboratory
+  url: https://n4thansouza.medium.com/utilizando-python-para-monitorar-a-velocidade-da-internet-28507450f272
+  github_url: 
+  description: 
+  technologies: [
+                  python-plain
+                ]
+  cover: /assets/images/project_images/Eletrical_Installations_Laboratory/testee.jpg
+  images: [
+    '/assets/images/project_images/internet_Speed/download_speed.png',
+    '/assets/images/project_images/internet_Speed/internet_speed1.jpg',
+    '/assets/images/project_images/internet_Speed/ping.png',
+    '/assets/images/project_images/internet_Speed/upload_speed.png'
+  ]
+
+
+#ELECTRICAL INSTALLATIONS LABORATORY
 # - name: Stack Overflow Clone
 #   url: https://dbc-hackoverflow.herokuapp.com/
 #   github_url: https://github.com/wvicioso/hackoverflow
