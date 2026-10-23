@@ -19,12 +19,12 @@ export const profile = {
 export const ui = {
   en: {
     nav: { about: "About", experience: "Experience", projects: "Projects", research: "Research", stack: "Stack", contact: "Contact" },
-    role: "Data Engineer · Analytics Engineer",
-    headline: "I build the pipelines, models and data products that turn raw operational data into decisions.",
-    sub: "Data engineering at the core, with a full-stack web background and a data science research track. I own data end to end: ingestion, modeling, quality, and the app people actually use.",
+    role: "Analytics Engineer · Data Engineer",
+    headline: "I build the data models, metrics and data products that turn raw operational data into decisions.",
+    sub: "Analytics engineering at the core, backed by data engineering, a full-stack web background and a data science research track. I own data end to end: ingestion, modeling, quality, and the app people actually use.",
     ctaProjects: "See projects",
     ctaContact: "Get in touch",
-    available: "Open to Data Engineering roles",
+    available: "Open to Analytics & Data Engineering roles",
     sections: {
       about: "about",
       experience: "experience",
@@ -33,28 +33,29 @@ export const ui = {
       stack: "stack",
       contact: "contact",
     },
-    aboutTitle: "From electrical engineering to data platforms",
+    aboutTitle: "From electrical engineering to analytics engineering",
     experienceTitle: "Where I've shipped",
     projectsTitle: "Selected work",
     researchTitle: "Research & publications",
     stackTitle: "Stack, by pipeline stage",
     contactTitle: "Let's build something reliable",
-    contactText: "I'm interested in data engineering and analytics engineering roles, remote or hybrid. The fastest way to reach me is LinkedIn.",
+    contactText: "I'm interested in analytics engineering and data engineering roles, remote or hybrid. The fastest way to reach me is LinkedIn.",
     present: "present",
     code: "Code",
     live: "Live",
     private: "Private",
+    paper: "Read paper",
     footer: "Built with Astro and Tailwind. Deployed with GitHub Actions.",
     switchLang: "PT",
   },
   pt: {
     nav: { about: "Sobre", experience: "Experiência", projects: "Projetos", research: "Pesquisa", stack: "Stack", contact: "Contato" },
-    role: "Engenheiro de Dados · Analytics Engineer",
-    headline: "Construo os pipelines, modelos e produtos de dados que transformam dados operacionais brutos em decisão.",
-    sub: "Engenharia de dados no centro, com bagagem forte em desenvolvimento web full-stack e uma trilha de pesquisa em ciência de dados. Cuido do dado de ponta a ponta: ingestão, modelagem, qualidade e o app que as pessoas de fato usam.",
+    role: "Analytics Engineer · Engenheiro de Dados",
+    headline: "Construo os modelos de dados, métricas e produtos de dados que transformam dados operacionais brutos em decisão.",
+    sub: "Analytics engineering no centro, com base em engenharia de dados, bagagem forte em desenvolvimento web full-stack e uma trilha de pesquisa em ciência de dados. Cuido do dado de ponta a ponta: ingestão, modelagem, qualidade e o app que as pessoas de fato usam.",
     ctaProjects: "Ver projetos",
     ctaContact: "Fale comigo",
-    available: "Aberto a vagas de Engenharia de Dados",
+    available: "Aberto a vagas de Analytics e Engenharia de Dados",
     sections: {
       about: "sobre",
       experience: "experiencia",
@@ -63,17 +64,18 @@ export const ui = {
       stack: "stack",
       contact: "contato",
     },
-    aboutTitle: "Da engenharia elétrica às plataformas de dados",
+    aboutTitle: "Da engenharia elétrica ao analytics engineering",
     experienceTitle: "Onde entreguei",
     projectsTitle: "Trabalhos selecionados",
     researchTitle: "Pesquisa e publicações",
     stackTitle: "Stack, por etapa do pipeline",
     contactTitle: "Vamos construir algo confiável",
-    contactText: "Tenho interesse em vagas de engenharia de dados e analytics engineering, remotas ou híbridas. O jeito mais rápido de falar comigo é pelo LinkedIn.",
+    contactText: "Tenho interesse em vagas de analytics engineering e engenharia de dados, remotas ou híbridas. O jeito mais rápido de falar comigo é pelo LinkedIn.",
     present: "atual",
     code: "Código",
     live: "Online",
     private: "Privado",
+    paper: "Ler artigo",
     footer: "Feito com Astro e Tailwind. Deploy com GitHub Actions.",
     switchLang: "EN",
   },
@@ -82,13 +84,13 @@ export const ui = {
 export const about: Record<Lang, string[]> = {
   en: [
     "I'm an electrical engineer from UFRN with an exchange period at ENSEEIHT (Toulouse INP) in France, and a master's degree from PPGEEC/UFRN focused on deep learning for time series.",
-    "Over the last years I moved from building web apps to building the data behind them. Today I design event-driven pipelines on AWS, model analytical marts on Databricks, and ship the dashboards and internal tools that sit on top of them.",
-    "Having shipped full-stack products (React, TypeScript, PostgreSQL) makes me a data engineer who thinks about the consumer of the data: contracts, latency, and whether the number on the screen can be trusted.",
+    "Over the last years I moved from building web apps to building the data behind them. Today I model analytical marts and metrics on Databricks, ship the dashboards and internal tools that sit on top of them, and build the event-driven pipelines on AWS that feed them.",
+    "Having shipped full-stack products (React, TypeScript, PostgreSQL) makes me an analytics engineer who thinks about the consumer of the data: clear metric definitions, data contracts, and whether the number on the screen can be trusted.",
   ],
   pt: [
     "Sou engenheiro eletricista pela UFRN, com intercâmbio na ENSEEIHT (Toulouse INP), na França, e mestrado no PPGEEC/UFRN com foco em deep learning para séries temporais.",
-    "Nos últimos anos saí da construção de aplicações web para a construção dos dados por trás delas. Hoje desenho pipelines orientados a eventos na AWS, modelo marts analíticos no Databricks e entrego os dashboards e ferramentas internas que ficam em cima deles.",
-    "Ter entregado produtos full-stack (React, TypeScript, PostgreSQL) me faz um engenheiro de dados que pensa em quem consome o dado: contratos, latência e se o número na tela é confiável.",
+    "Nos últimos anos saí da construção de aplicações web para a construção dos dados por trás delas. Hoje modelo marts analíticos e métricas no Databricks, entrego os dashboards e ferramentas internas que ficam em cima deles e construo os pipelines orientados a eventos na AWS que os alimentam.",
+    "Ter entregado produtos full-stack (React, TypeScript, PostgreSQL) me faz um analytics engineer que pensa em quem consome o dado: definições de métricas claras, contratos de dados e se o número na tela é confiável.",
   ],
 };
 
@@ -111,7 +113,7 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "Grupo Energisa",
-    role: { en: "Data & Analytics", pt: "Dados e Analytics" },
+    role: { en: "Analytics Engineer", pt: "Analytics Engineer" },
     start: "2026",
     summary: {
       en: "Geospatial advanced analytics for one of Brazil's largest power distribution groups.",
@@ -131,7 +133,7 @@ export const experience: Experience[] = [
   },
   {
     company: "Carpediem Homes",
-    role: { en: "Data Engineer", pt: "Engenheiro de Dados" },
+    role: { en: "Software Developer", pt: "Desenvolvedor de Software" },
     start: "2024",
     summary: {
       en: "Data platform for a short-term rental management company: every reservation, property and payment flows through it.",
@@ -236,6 +238,7 @@ export type Publication = {
   venue: Localized;
   year: string;
   description: Localized;
+  url?: string;
 };
 
 export const research: Publication[] = [
@@ -262,6 +265,7 @@ export const research: Publication[] = [
       en: "Conference paper derived from the dissertation.",
       pt: "Artigo de conferência derivado da dissertação.",
     },
+    url: "https://ojs.sba.org.br/index.php/cba/article/view/6283",
   },
   {
     title: {

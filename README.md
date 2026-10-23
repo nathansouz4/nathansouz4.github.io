@@ -1,6 +1,6 @@
 # nathansouz4.github.io
 
-Personal portfolio of Nathan Souza, Data Engineer. Live at <https://nathansouz4.github.io>.
+Personal portfolio of Nathan Souza, Analytics Engineer. Live at <https://nathansouz4.github.io>.
 
 Built with [Astro](https://astro.build) and Tailwind CSS, bilingual (EN at `/`, PT at `/pt/`), deployed to GitHub Pages by GitHub Actions on every push to `main`.
 

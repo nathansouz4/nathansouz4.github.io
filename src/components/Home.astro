@@ -120,6 +120,16 @@ const year = new Date().getFullYear();
                 <h3 class="font-semibold leading-snug text-balance">{r.title[lang]}</h3>
                 <p class="mt-1 font-mono text-xs text-accent-2">{r.venue[lang]}</p>
                 <p class="mt-2 text-[15px] text-muted">{r.description[lang]}</p>
+                {r.url && (
+                  <a
+                    href={r.url}
+                    target="_blank"
+                    rel="noopener"
+                    class="mt-4 inline-flex rounded-lg border border-line px-3 py-1.5 font-mono text-xs text-ink transition hover:border-accent hover:text-accent"
+                  >
+                    {t.paper} ↗
+                  </a>
+                )}
               </div>
             </article>
           ))
