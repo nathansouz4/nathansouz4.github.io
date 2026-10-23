@@ -1,0 +1,204 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "./Nav.astro";
+import Hero from "./Hero.astro";
+import SectionHeading from "./SectionHeading.astro";
+import { about, experience, highlights, profile, projects, research, stack, ui, type Lang } from "../data/content";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const s = t.sections;
+const year = new Date().getFullYear();
+---
+
+<Layout lang={lang}>
+  <Nav lang={lang} />
+  <main>
+    <Hero lang={lang} />
+
+    <section id={s.about} class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+      <SectionHeading index="01" id={s.about} title={t.aboutTitle} />
+      <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
+        <div class="reveal space-y-5 text-lg leading-relaxed text-muted">
+          {about[lang].map((p) => <p>{p}</p>)}
+        </div>
+        <div class="reveal grid gap-4 self-start">
+          {
+            highlights.map((h) => (
+              <div class="card flex items-baseline gap-4 p-5">
+                <span class="font-mono text-3xl font-bold text-accent">{h.value}</span>
+                <span class="text-sm text-muted">{h.label[lang]}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id={s.experience} class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+      <SectionHeading index="02" id={s.experience} title={t.experienceTitle} />
+      <ol class="relative space-y-8 border-l border-line pl-6 sm:pl-8">
+        {
+          experience.map((job) => (
+            <li class="reveal relative">
+              <span class="absolute top-2 -left-[31px] size-3 rounded-full border-2 border-accent bg-bg sm:-left-[39px]" />
+              <div class="card p-6 sm:p-8">
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="text-xl font-semibold">
+                    {job.role[lang]} <span class="text-dim">@</span> <span class="text-accent">{job.company}</span>
+                  </h3>
+                  <span class="font-mono text-sm text-dim">
+                    {job.start} → {job.end ?? t.present}
+                  </span>
+                </div>
+                <p class="mt-2 text-muted">{job.summary[lang]}</p>
+                <ul class="mt-4 space-y-2 text-[15px] leading-relaxed text-ink/85">
+                  {job.bullets[lang].map((b) => (
+                    <li class="flex gap-3">
+                      <span class="mt-1 font-mono text-xs text-accent">▸</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  {job.tags.map((tag) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section id={s.projects} class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+      <SectionHeading index="03" id={s.projects} title={t.projectsTitle} />
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {
+          projects.map((p) => (
+            <article class="reveal card group flex flex-col p-6 hover:-translate-y-1">
+              <p class="font-mono text-xs text-accent-2">{p.kind[lang]}</p>
+              <h3 class="mt-2 text-xl font-semibold group-hover:text-accent">{p.title}</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-muted">{p.description[lang]}</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                {p.tags.map((tag) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+              <div class="mt-5 flex gap-4 border-t border-line pt-4 font-mono text-xs">
+                {p.code && (
+                  <a href={p.code} target="_blank" rel="noopener" class="text-ink hover:text-accent">
+                    {t.code} ↗
+                  </a>
+                )}
+                {p.live && (
+                  <a href={p.live} target="_blank" rel="noopener" class="text-ink hover:text-accent">
+                    {t.live} ↗
+                  </a>
+                )}
+                {p.private && <span class="text-dim">● {t.private}</span>}
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id={s.research} class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+      <SectionHeading index="04" id={s.research} title={t.researchTitle} />
+      <div class="space-y-4">
+        {
+          research.map((r) => (
+            <article class="reveal card grid gap-3 p-6 sm:grid-cols-[5rem_1fr]">
+              <span class="font-mono text-sm text-accent">{r.year}</span>
+              <div>
+                <h3 class="font-semibold leading-snug text-balance">{r.title[lang]}</h3>
+                <p class="mt-1 font-mono text-xs text-accent-2">{r.venue[lang]}</p>
+                <p class="mt-2 text-[15px] text-muted">{r.description[lang]}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+      <a
+        href={profile.links.lattes}
+        target="_blank"
+        rel="noopener"
+        class="reveal mt-6 inline-block font-mono text-sm text-muted hover:text-accent"
+      >
+        Currículo Lattes ↗
+      </a>
+    </section>
+
+    <section id={s.stack} class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+      <SectionHeading index="05" id={s.stack} title={t.stackTitle} />
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          stack.map((layer, i) => (
+            <div class="reveal card p-5">
+              <p class="flex items-center gap-2 font-mono text-sm text-ink">
+                <span class="text-accent">{String(i + 1).padStart(2, "0")}</span>
+                {layer.stage[lang]}
+                {i < stack.length - 1 && <span class="ml-auto text-dim">→</span>}
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                {layer.items.map((item) => (
+                  <span class="tag text-ink/80">{item}</span>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id={s.contact} class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+      <div class="reveal card relative overflow-hidden p-8 text-center sm:p-14">
+        <div aria-hidden="true" class="glow absolute inset-0 opacity-70"></div>
+        <div class="relative">
+          <p class="font-mono text-sm text-accent"><span class="text-dim">06 /</span> {s.contact}</p>
+          <h2 class="mx-auto mt-3 max-w-2xl text-3xl font-bold tracking-tight text-balance sm:text-4xl">{t.contactTitle}</h2>
+          <p class="mx-auto mt-4 max-w-xl text-muted">{t.contactText}</p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <a
+              href={profile.links.linkedin}
+              target="_blank"
+              rel="noopener"
+              class="rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-bg transition hover:brightness-110"
+            >
+              LinkedIn ↗
+            </a>
+            <a
+              href={profile.links.github}
+              target="_blank"
+              rel="noopener"
+              class="rounded-lg border border-line px-5 py-2.5 text-sm font-semibold transition hover:border-accent hover:text-accent"
+            >
+              GitHub ↗
+            </a>
+            {profile.links.email && (
+              <a
+                href={`mailto:${profile.links.email}`}
+                class="rounded-lg border border-line px-5 py-2.5 text-sm font-semibold transition hover:border-accent hover:text-accent"
+              >
+                Email
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-6 font-mono text-xs text-dim sm:px-6">
+      <span>© {year} {profile.name}</span>
+      <span>{t.footer}</span>
+    </div>
+  </footer>
+</Layout>

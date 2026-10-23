@@ -1,0 +1,141 @@
+---
+import { profile, ui, type Lang } from "../data/content";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+
+const rows =
+  lang === "en"
+    ? [
+        ["role", "Data Engineer"],
+        ["focus", "pipelines · marts · data apps"],
+        ["also", "full-stack web · data science"],
+        ["based_in", profile.location.en],
+      ]
+    : [
+        ["papel", "Engenheiro de Dados"],
+        ["foco", "pipelines · marts · data apps"],
+        ["tambem", "web full-stack · ciência de dados"],
+        ["local", profile.location.pt],
+      ];
+
+const sources = ["webhooks", "APIs", "files"];
+const stages = ["raw", "staging", "mart"];
+const outputs = ["apps", "BI"];
+---
+
+<section id="top" class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pt-32 pb-20 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:pt-40">
+  <div>
+    <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-panel/70 px-3 py-1 font-mono text-xs text-muted">
+      <span class="relative flex size-2">
+        <span class="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-60"></span>
+        <span class="relative inline-flex size-2 rounded-full bg-accent"></span>
+      </span>
+      {t.available}
+    </p>
+    <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl">
+      {profile.name}
+    </h1>
+    <p class="caret mt-3 font-mono text-lg text-accent sm:text-xl">{t.role}</p>
+    <p class="mt-6 max-w-xl text-xl leading-relaxed text-ink/90 text-balance">{t.headline}</p>
+    <p class="mt-4 max-w-xl leading-relaxed text-muted">{t.sub}</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a
+        href={`#${t.sections.projects}`}
+        class="rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-bg transition hover:brightness-110"
+      >
+        {t.ctaProjects} →
+      </a>
+      <a
+        href={`#${t.sections.contact}`}
+        class="rounded-lg border border-line px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-accent hover:text-accent"
+      >
+        {t.ctaContact}
+      </a>
+      <a
+        href={profile.links.github}
+        target="_blank"
+        rel="noopener"
+        class="rounded-lg px-3 py-2.5 font-mono text-sm text-muted transition hover:text-ink"
+      >
+        github ↗
+      </a>
+      <a
+        href={profile.links.linkedin}
+        target="_blank"
+        rel="noopener"
+        class="rounded-lg px-3 py-2.5 font-mono text-sm text-muted transition hover:text-ink"
+      >
+        linkedin ↗
+      </a>
+    </div>
+  </div>
+
+  <div class="card overflow-hidden shadow-2xl shadow-accent/5">
+    <div class="flex items-center gap-2 border-b border-line px-4 py-3">
+      <span class="size-3 rounded-full bg-[#ff5f57]"></span>
+      <span class="size-3 rounded-full bg-[#febc2e]"></span>
+      <span class="size-3 rounded-full bg-[#28c840]"></span>
+      <span class="ml-3 font-mono text-xs text-dim">profile.sql</span>
+    </div>
+    <div class="p-5 font-mono text-[13px] leading-relaxed">
+      <p>
+        <span class="text-accent-2">SELECT</span> key, value{" "}
+        <span class="text-accent-2">FROM</span> nathan.profile;
+      </p>
+      <table class="mt-3 w-full border-collapse">
+        <tbody>
+          {
+            rows.map(([k, v]) => (
+              <tr class="border-t border-line/70">
+                <td class="py-1.5 pr-4 text-dim">{k}</td>
+                <td class="py-1.5 text-ink">{v}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+      <p class="mt-2 text-dim">({rows.length} rows · 0.004s)</p>
+    </div>
+
+    <div class="border-t border-line bg-bg/40 px-3 py-4">
+      <svg viewBox="0 0 520 170" class="w-full" role="img" aria-label="Data pipeline: sources to raw, staging, mart, then apps and BI">
+        <defs>
+          <linearGradient id="edge" x1="0" x2="1">
+            <stop offset="0" stop-color="var(--color-accent-2)" />
+            <stop offset="1" stop-color="var(--color-accent)" />
+          </linearGradient>
+        </defs>
+        {sources.map((_, i) => (
+          <path d={`M78 ${35 + i * 50} C 110 ${35 + i * 50}, 110 85, 140 85`} fill="none" stroke="url(#edge)" stroke-width="1.5" class="flow" />
+        ))}
+        <path d="M206 85 H 236 M302 85 H 332" fill="none" stroke="url(#edge)" stroke-width="1.5" class="flow" />
+        {outputs.map((_, i) => (
+          <path d={`M398 85 C 425 85, 425 ${55 + i * 60}, 448 ${55 + i * 60}`} fill="none" stroke="url(#edge)" stroke-width="1.5" class="flow" />
+        ))}
+        {sources.map((s, i) => (
+          <g>
+            <rect x="8" y={20 + i * 50} width="70" height="30" rx="7" fill="var(--color-panel)" stroke="var(--color-line)" class="node-pulse" style={`--i:0`} />
+            <text x="43" y={39 + i * 50} text-anchor="middle" font-size="11" fill="var(--color-muted)" font-family="var(--font-mono)">{s}</text>
+          </g>
+        ))}
+        {stages.map((s, i) => (
+          <g>
+            <rect x={140 + i * 96} y="68" width="66" height="34" rx="8" fill="var(--color-panel-2)" stroke="var(--color-line)" stroke-width="1.5" class="node-pulse" style={`--i:${i + 1}`} />
+            <text x={173 + i * 96} y="89" text-anchor="middle" font-size="11" fill="var(--color-ink)" font-family="var(--font-mono)">{s}</text>
+          </g>
+        ))}
+        {outputs.map((s, i) => (
+          <g>
+            <rect x="448" y={40 + i * 60} width="64" height="30" rx="7" fill="var(--color-panel)" stroke="var(--color-line)" class="node-pulse" style={`--i:4`} />
+            <text x="480" y={59 + i * 60} text-anchor="middle" font-size="11" fill="var(--color-accent)" font-family="var(--font-mono)">{s}</text>
+          </g>
+        ))}
+      </svg>
+    </div>
+  </div>
+</section>
